@@ -9,7 +9,7 @@ export default WrappedComponent =>
   class DetectPrint extends React.Component {
     state = { printing: false };
 
-    list = window.matchMedia && window.matchMedia("print");
+    list = typeof(window) !== 'undefined' && window.matchMedia && window.matchMedia("print");
 
     handleEvent = list => {
       this.setState({ printing: !!list.matches });

@@ -1,29 +1,20 @@
-import React from "react";
+import { useState, useEffect } from "react";
 
-/*
-  method of detecting print adapted from:
-  www.tjvantoll.com/2012/06/15/detecting-print-requests-with-javascript/
-*/
+const useDetectPrint = () => {
+  const [isPrinting, setIsPrinting] = useState(false);
+  const handleBeforeprint = () => setIsPrinting(true);
+  const handleAfterprint = () => setIsPrinting(false);
 
-export default WrappedComponent =>
-  class DetectPrint extends React.Component {
-    state = { printing: false };
-
-    list = typeof(window) !== 'undefined' && window.matchMedia && window.matchMedia("print");
-
-    handleEvent = list => {
-      this.setState({ printing: !!list.matches });
+  useEffect(() => {
+    window.addEventListener("beforeprint", handleBeforeprint);
+    window.addEventListener("afterprint", handleAfterprint);
+    return () => {
+      window.removeEventListener("beforeprint", handleBeforeprint);
+      window.removeEventListener("afterprint", handleAfterprint);
     };
+  });
 
-    componentWillMount = () => {
-      this.list && this.list.addListener(this.handleEvent);
-    };
+  return isPrinting;
+};
 
-    componentWillUnmount = () => {
-      this.list && this.list.removeListener(this.handleEvent);
-    };
-
-    render = () => (
-      <WrappedComponent {...this.props} printing={this.state.printing} />
-    );
-  };
+export default useDetectPrint;

@@ -1,6 +1,6 @@
 {
   "name": "react-detect-print",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Detect printing status in a react.js application.",
   "main": "index.js",
   "author": "Drew Goodwin <drew@drewgoodwin.com>",

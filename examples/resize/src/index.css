@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* http://stackoverflow.com/questions/16649943/css-to-set-a4-paper-size */
+@page {
+  size: 8.5in 11in;
+  margin: 0;
+}
+@media print {
+  html,
+  body {
+    width: 8.5in;
+    height: 11in;
+  }
+}

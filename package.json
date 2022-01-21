@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "description": "Detect printing status in a react.js application.",
   "main": "index.js",
+  "types": "./index.d.ts",
   "author": "Drew Goodwin <drew@drewgoodwin.com>",
   "license": "MIT",
   "repository": {

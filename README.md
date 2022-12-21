@@ -33,5 +33,5 @@ The library previously used the approach detailed [in this blog post](https://ww
 ## Installation
 
 ```
-npm install --save react-detect-print
+npm install react-detect-print
 ```

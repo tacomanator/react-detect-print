@@ -1,3 +1,3 @@
 Run the example:
 
-### `yarn start`
+### `npm install && npm start`

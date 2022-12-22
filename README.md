@@ -11,12 +11,12 @@ Detect printing state such that be used within logic inside of a react.js applic
 ```jsx
 import useDetectPrint from "react-detect-print";
 
-const Component = (props) => {
+const Component = () => {
   const printing = useDetectPrint();
   const color = printing ? "blue" : "red";
   return (
     <div>
-      Printing? <span style={{ color }}>{JSON.stringify(props.printing)}</span>
+      Printing? <span style={{ color }}>{JSON.stringify(printing)}</span>
     </div>
   );
 };

@@ -6,13 +6,13 @@ body {
 
 /* http://stackoverflow.com/questions/16649943/css-to-set-a4-paper-size */
 @page {
-  size: 8.5in 11in;
+  size: A4;
   margin: 0;
 }
 @media print {
   html,
   body {
-    width: 8.5in;
-    height: 11in;
+    width: 210mm;
+    height: 297mm;
   }
 }

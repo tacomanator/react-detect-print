@@ -5,11 +5,11 @@ class Width extends React.Component {
   element = {};
 
   componentDidMount = () => {
-    onElementResize(this.element, e => this.forceUpdate());
+    onElementResize(this.element, () => this.forceUpdate());
     this.forceUpdate();
   };
 
-  setRef = element => {
+  setRef = (element) => {
     this.element = element;
   };
 

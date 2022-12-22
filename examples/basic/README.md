@@ -1,3 +1,3 @@
 Run the example:
 
-### `npm install && npm start`
+### `npm install && npm run dev`

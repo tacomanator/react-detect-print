@@ -9,7 +9,7 @@ const style = {
   borderStyle: "solid",
   borderColor: "black",
   textAlign: "center",
-  backgroundColor: "#ccc"
+  backgroundColor: "#ccc",
 };
 
 class Child extends React.Component {

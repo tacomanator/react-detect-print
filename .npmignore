@@ -1,2 +1,32 @@
-index.jsx
-examples/
+# Source code (dist is published)
+src/
+
+# Config files
+tsconfig.json
+tsup.config.ts
+biome.json
+.editorconfig
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Husky
+.husky/
+
+# IDE
+.idea/
+.vscode/
+
+# Test
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+__tests__/
+coverage/
+
+# Misc
+*.log
+.DS_Store

@@ -16,26 +16,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
-        style={{
-          margin,
-          borderWidth: 5,
-          borderStyle: "solid",
-          borderColor: "black",
-          textAlign: "center",
-          boxSizing: "border-box",
-          MozBoxSizing: "border-box",
-          WebkitBoxSizing: "border-box",
-          width: printing ? 796 - margin * 2 : "auto",
-        }}
+        className="border-5 border-solid border-black text-center box-border"
+        style={{ margin, width: printing ? 796 - margin * 2 : "auto" }}
       >
         <h2>Printing? {JSON.stringify(printing)}</h2>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            flexFlow: "row wrap",
-          }}
-        >
+        <div className="flex justify-between flex-row flex-wrap">
           <Child printing={printing} />
           <Child printing={printing} />
         </div>
